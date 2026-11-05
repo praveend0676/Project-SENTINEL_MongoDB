@@ -1,0 +1,83 @@
+{
+  "tables": {
+    "customer": "customers",
+    "merchant": "merchants",
+    "device": "devices",
+    "transaction": "transactions",
+    "payment_outcome": "payment_outcomes",
+    "label": "labels",
+    "client_features": "features"
+  },
+  "columns": {
+    "customer": {
+      "id": "customer_id"
+    },
+    "merchant": {
+      "id": "merchant_id",
+      "latitude": "latitude",
+      "longitude": "longitude"
+    },
+    "device": {
+      "id": "device_id",
+      "customer_id": "customer_id"
+    },
+    "transaction": {
+      "id": "transaction_id",
+      "customer_id": "customer_id",
+      "merchant_id": "merchant_id",
+      "device_id": "device_id",
+      "timestamp": "transaction_time",
+      "amount": "transaction_amount",
+      "customer_latitude": "customer_latitude",
+      "customer_longitude": "customer_longitude",
+      "merchant_latitude": "merchant_latitude",
+      "merchant_longitude": "merchant_longitude",
+      "mcc": "merchant_category",
+      "status": "status"
+    },
+    "payment_outcome": {
+      "transaction_id": "transaction_id",
+      "outcome": "outcome",
+      "timestamp": "outcome_time"
+    },
+    "label": {
+      "transaction_id": "transaction_id",
+      "label": "fraud_label"
+    },
+    "client_features": {
+      "transaction_id": "transaction_id"
+    }
+  },
+  "feature_columns": {
+    "amount_to_average_ratio": "amount_to_average_ratio",
+    "is_new_device": "is_new_device",
+    "customer_merchant_distance_km": "customer_merchant_distance_km",
+    "is_night": "is_night",
+    "transaction_count_last_1_hour": "transaction_count_last_1_hour",
+    "transaction_amount_last_24_hours": "transaction_amount_last_24_hours"
+  },
+  "reason_code_thresholds": {
+    "R02_distance_km": null,
+    "R04_failed_attempts_count": null,
+    "R05_amount_to_average_ratio": null,
+    "R06_new_account_age_days": null,
+    "R07_transaction_count_last_1_hour": null,
+    "R07_transaction_amount_last_24_hours": null,
+    "R08_high_risk_mcc_values": []
+  },
+  "night_start_hour_inclusive": 0,
+  "night_end_hour_exclusive": 5,
+  "history_days": 90,
+  "sample_limit_per_table": 5000,
+  "page_size": 1000,
+  "timestamp_timezone": "Asia/Kolkata",
+  "holdout_start": "2026-01-01",
+  "holdout_end_exclusive": "2026-03-01",
+  "split_column": null,
+  "split_values": {
+    "warmup": "warmup",
+    "train": "train",
+    "validation": "validation",
+    "holdout": "holdout"
+  }
+}

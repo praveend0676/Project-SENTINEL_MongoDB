@@ -1,0 +1,20 @@
+Document ID: SYN-CHARGEBACK_NARRATIVES-002
+Document Type: chargeback_narratives
+Title: Duplicate processing — Scenario 002
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+The fictional cardholder reports that the same purchase appears more than once. Compare authorization, clearing, timestamps, and amounts.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 002 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The reviewer should distinguish confirmed facts from assumptions and unresolved questions.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+duplicate processing, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

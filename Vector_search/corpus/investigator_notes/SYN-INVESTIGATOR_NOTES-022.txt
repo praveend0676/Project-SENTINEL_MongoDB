@@ -1,0 +1,20 @@
+Document ID: SYN-INVESTIGATOR_NOTES-022
+Document Type: investigator_notes
+Title: Evidence assessment — Scenario 022
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+Available evidence was compared across transaction, device, and authentication events. Missing evidence was documented as an open question.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 022 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The reviewer should distinguish confirmed facts from assumptions and unresolved questions.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+evidence assessment, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

@@ -1,0 +1,20 @@
+Document ID: SYN-CHARGEBACK_NARRATIVES-016
+Document Type: chargeback_narratives
+Title: Goods not received — Scenario 016
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+The fictional cardholder disputes a purchase because the goods were reportedly not received. Evidence may include fulfilment status, delivery confirmation, and customer communications.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 016 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The control owner should maintain an auditable record of the review.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+goods not received, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

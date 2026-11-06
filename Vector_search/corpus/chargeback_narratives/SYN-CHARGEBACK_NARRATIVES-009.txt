@@ -1,0 +1,20 @@
+Document ID: SYN-CHARGEBACK_NARRATIVES-009
+Document Type: chargeback_narratives
+Title: Cancelled recurring payment — Scenario 009
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+The fictional cardholder states that a recurring payment was cancelled before the disputed billing date. Review cancellation timing and merchant records.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 009 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The outcome should be reproducible from the recorded evidence and decision rationale.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+cancelled recurring payment, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

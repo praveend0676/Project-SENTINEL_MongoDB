@@ -1,0 +1,20 @@
+Document ID: SYN-INVESTIGATOR_NOTES-010
+Document Type: investigator_notes
+Title: Disposition review — Scenario 010
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+The case was assigned a provisional disposition pending independent review. The decision rationale and supporting signals were documented.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 010 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+Sensitive production information must not be copied into this synthetic training corpus.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+disposition review, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

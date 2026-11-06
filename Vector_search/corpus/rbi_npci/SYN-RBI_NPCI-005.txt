@@ -1,0 +1,20 @@
+Document ID: SYN-RBI_NPCI-005
+Document Type: rbi_npci
+Title: Incident Reporting — Scenario 005
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+An incident record should capture detection time, affected service, severity, containment actions, escalation owner, and closure evidence.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 005 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+Sensitive production information must not be copied into this synthetic training corpus.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+incident reporting, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

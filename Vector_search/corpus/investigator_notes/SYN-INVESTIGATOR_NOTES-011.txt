@@ -1,0 +1,20 @@
+Document ID: SYN-INVESTIGATOR_NOTES-011
+Document Type: investigator_notes
+Title: Case triage — Scenario 011
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+The analyst reviewed the synthetic alert, validated the event timeline, and checked whether required source records were present.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 011 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The control owner should maintain an auditable record of the review.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+case triage, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

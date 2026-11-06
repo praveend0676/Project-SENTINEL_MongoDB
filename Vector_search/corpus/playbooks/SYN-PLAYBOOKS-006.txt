@@ -1,0 +1,20 @@
+Document ID: SYN-PLAYBOOKS-006
+Document Type: playbooks
+Title: Velocity review — Scenario 006
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+Review transaction count and aggregate value in the defined observation window. Compare against the customer's historical baseline and applicable policy thresholds.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 006 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The control owner should maintain an auditable record of the review.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+velocity review, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

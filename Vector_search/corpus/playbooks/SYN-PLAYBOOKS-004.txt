@@ -1,0 +1,20 @@
+Document ID: SYN-PLAYBOOKS-004
+Document Type: playbooks
+Title: Amount spike review — Scenario 004
+Classification: SYNTHETIC TEST DATA
+Status: Training example only
+
+Summary
+Compare the transaction amount with a suitable customer baseline and merchant context. Record the baseline window and calculation method.
+
+Operational details
+This is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 004 is not associated with a real person, customer, merchant, payment, or investigation.
+
+Review guidance
+The outcome should be reproducible from the recorded evidence and decision rationale.
+Record the source, relevant timestamps, evidence reviewed, decision rationale, and any follow-up action. Where a policy threshold is required, use the approved project configuration rather than inventing a value.
+
+Search keywords
+amount spike review, payment risk, fraud monitoring, dispute workflow, evidence review, transaction analysis, operational control, synthetic scenario
+
+End of synthetic document.

@@ -1,0 +1,3 @@
+Investigation and escalation actions
+
+For low evidence, allow normal processing while retaining monitoring. For mixed or corroborated risk indicators, route to manual review and preserve relevant transaction, device and policy evidence. Blocking should follow an approved decision policy and authorised thresholds; this demo does not make an irreversible block decision.

@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What should an investigator check for new device and device trust?",
+    "expected_document": "POLICY_01_NEW_DEVICE.txt"
+  },
+  {
+    "question": "What should an investigator check for geographic mismatch?",
+    "expected_document": "POLICY_02_GEO_MISMATCH.txt"
+  },
+  {
+    "question": "What should an investigator check for unusual transaction time?",
+    "expected_document": "POLICY_03_ODD_HOUR.txt"
+  },
+  {
+    "question": "What should an investigator check for repeated failed attempts?",
+    "expected_document": "POLICY_04_FAILED_ATTEMPTS.txt"
+  },
+  {
+    "question": "What should an investigator check for unusual transaction amount?",
+    "expected_document": "POLICY_05_AMOUNT_SPIKE.txt"
+  },
+  {
+    "question": "What should an investigator check for new account activity?",
+    "expected_document": "POLICY_06_NEW_ACCOUNT.txt"
+  },
+  {
+    "question": "What should an investigator check for transaction velocity?",
+    "expected_document": "POLICY_07_VELOCITY.txt"
+  },
+  {
+    "question": "What should an investigator check for merchant category risk?",
+    "expected_document": "POLICY_08_HIGH_RISK_MCC.txt"
+  },
+  {
+    "question": "What should an investigator check for shared device neighbourhood?",
+    "expected_document": "POLICY_09_SHARED_DEVICE.txt"
+  },
+  {
+    "question": "What should an investigator check for investigation and escalation actions?",
+    "expected_document": "POLICY_10_INVESTIGATION_ACTIONS.txt"
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "metric": "hit@5",
+  "queries": 10,
+  "hits": 10,
+  "hit_at_5": 1.0,
+  "results": [
+    {
+      "question": "What should an investigator check for new device and device trust?",
+      "expected_document": "POLICY_01_NEW_DEVICE.txt",
+      "top5_documents": [
+        "POLICY_01_NEW_DEVICE.txt",
+        "playbooks/SYN-PLAYBOOKS-017.txt",
+        "playbooks/SYN-PLAYBOOKS-047.txt",
+        "playbooks/SYN-PLAYBOOKS-037.txt",
+        "playbooks/SYN-PLAYBOOKS-027.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for geographic mismatch?",
+      "expected_document": "POLICY_02_GEO_MISMATCH.txt",
+      "top5_documents": [
+        "POLICY_02_GEO_MISMATCH.txt",
+        "playbooks/SYN-PLAYBOOKS-033.txt",
+        "playbooks/SYN-PLAYBOOKS-038.txt",
+        "playbooks/SYN-PLAYBOOKS-018.txt",
+        "playbooks/SYN-PLAYBOOKS-008.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for unusual transaction time?",
+      "expected_document": "POLICY_03_ODD_HOUR.txt",
+      "top5_documents": [
+        "POLICY_03_ODD_HOUR.txt",
+        "POLICY_07_VELOCITY.txt",
+        "rbi_npci/SYN-RBI_NPCI-048.txt",
+        "rbi_npci/SYN-RBI_NPCI-018.txt",
+        "rbi_npci/SYN-RBI_NPCI-013.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for repeated failed attempts?",
+      "expected_document": "POLICY_04_FAILED_ATTEMPTS.txt",
+      "top5_documents": [
+        "POLICY_04_FAILED_ATTEMPTS.txt",
+        "playbooks/SYN-PLAYBOOKS-020.txt",
+        "playbooks/SYN-PLAYBOOKS-025.txt",
+        "playbooks/SYN-PLAYBOOKS-045.txt",
+        "playbooks/SYN-PLAYBOOKS-005.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for unusual transaction amount?",
+      "expected_document": "POLICY_05_AMOUNT_SPIKE.txt",
+      "top5_documents": [
+        "playbooks/SYN-PLAYBOOKS-029.txt",
+        "playbooks/SYN-PLAYBOOKS-014.txt",
+        "POLICY_05_AMOUNT_SPIKE.txt",
+        "playbooks/SYN-PLAYBOOKS-044.txt",
+        "playbooks/SYN-PLAYBOOKS-034.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for new account activity?",
+      "expected_document": "POLICY_06_NEW_ACCOUNT.txt",
+      "top5_documents": [
+        "POLICY_06_NEW_ACCOUNT.txt",
+        "playbooks/SYN-PLAYBOOKS-002.txt",
+        "playbooks/SYN-PLAYBOOKS-022.txt",
+        "playbooks/SYN-PLAYBOOKS-017.txt",
+        "playbooks/SYN-PLAYBOOKS-047.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for transaction velocity?",
+      "expected_document": "POLICY_07_VELOCITY.txt",
+      "top5_documents": [
+        "POLICY_07_VELOCITY.txt",
+        "playbooks/SYN-PLAYBOOKS-006.txt",
+        "playbooks/SYN-PLAYBOOKS-016.txt",
+        "playbooks/SYN-PLAYBOOKS-046.txt",
+        "playbooks/SYN-PLAYBOOKS-036.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for merchant category risk?",
+      "expected_document": "POLICY_08_HIGH_RISK_MCC.txt",
+      "top5_documents": [
+        "POLICY_08_HIGH_RISK_MCC.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-024.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-004.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-044.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-049.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for shared device neighbourhood?",
+      "expected_document": "POLICY_09_SHARED_DEVICE.txt",
+      "top5_documents": [
+        "POLICY_09_SHARED_DEVICE.txt",
+        "playbooks/SYN-PLAYBOOKS-002.txt",
+        "playbooks/SYN-PLAYBOOKS-017.txt",
+        "playbooks/SYN-PLAYBOOKS-047.txt",
+        "playbooks/SYN-PLAYBOOKS-022.txt"
+      ],
+      "hit_at_5": 1
+    },
+    {
+      "question": "What should an investigator check for investigation and escalation actions?",
+      "expected_document": "POLICY_10_INVESTIGATION_ACTIONS.txt",
+      "top5_documents": [
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-001.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-011.txt",
+        "POLICY_10_INVESTIGATION_ACTIONS.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-006.txt",
+        "investigator_notes/SYN-INVESTIGATOR_NOTES-026.txt"
+      ],
+      "hit_at_5": 1
+    }
+  ],
+  "retrieval_mode": "Qdrant"
+}

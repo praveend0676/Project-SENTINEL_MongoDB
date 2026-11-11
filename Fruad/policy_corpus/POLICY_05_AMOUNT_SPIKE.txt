@@ -1,0 +1,3 @@
+Unusual transaction amount
+
+Calculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.

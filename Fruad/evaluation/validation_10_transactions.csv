@@ -1,0 +1,11 @@
+transaction_id,fraud_label,split
+TXN0001386,1,time_based_validation_sample
+TXN0002416,1,time_based_validation_sample
+TXN0002822,1,time_based_validation_sample
+TXN0003642,1,time_based_validation_sample
+TXN0004235,1,time_based_validation_sample
+TXN0002008,0,time_based_validation_sample
+TXN0002099,0,time_based_validation_sample
+TXN0002109,0,time_based_validation_sample
+TXN0002825,0,time_based_validation_sample
+TXN0004071,0,time_based_validation_sample

@@ -1,0 +1,3 @@
+Shared device neighbourhood
+
+A device associated with multiple distinct customers within a seven-day window may indicate coordinated activity or a shared household/business device. Inspect the number of distinct customers, linked transactions and time window. Shared-device evidence should be corroborated and should not expose unrelated customer personal information.

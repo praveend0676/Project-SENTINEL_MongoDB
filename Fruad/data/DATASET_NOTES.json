@@ -1,0 +1,10 @@
+{
+  "dataset": "transactions.csv from user's SENTINEL Library",
+  "rows": 5000,
+  "fraud_rows": 139,
+  "genuine_rows": 4861,
+  "validation_cutoff_utc": "2026-10-31 19:49:03.600000+00:00",
+  "validation_sample_fraud": 5,
+  "validation_sample_genuine": 5,
+  "warning": "Synthetic learning data; not the original client validation holdout."
+}

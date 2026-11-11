@@ -1,0 +1,11 @@
+transaction_id,customer_id,merchant_id,merchant_category,device_id,transaction_time,transaction_amount,currency,payment_method,transaction_status,fraud_label,fraud_probability,source,split
+TXN0001386,CUST0687,MER0040,electronics,DEV01373,2026-11-02 09:50:39+00:00,7334.77,INR,UPI,SUCCESS,1,0.9681,sentinel_synthetic_training,time_based_validation_sample
+TXN0002416,CUST0429,MER0017,grocery,DEV00857,2026-11-01 19:00:07+00:00,4523.68,INR,WALLET,SUCCESS,1,0.9514,sentinel_synthetic_training,time_based_validation_sample
+TXN0002822,CUST0634,MER0029,travel,DEV01268,2026-11-02 11:19:22+00:00,12686.23,INR,WALLET,SUCCESS,1,0.9478,sentinel_synthetic_training,time_based_validation_sample
+TXN0003642,CUST0581,MER0040,jewellery,DEV01162,2026-11-01 14:59:42+00:00,95566.75,INR,CARD,SUCCESS,1,0.9667,sentinel_synthetic_training,time_based_validation_sample
+TXN0004235,CUST0905,MER0001,electronics,DEV01655,2026-11-02 11:44:13+00:00,47394.02,INR,CARD,SUCCESS,1,0.9546,sentinel_synthetic_training,time_based_validation_sample
+TXN0002008,CUST0472,MER0006,fuel,DEV00944,2026-11-02 00:24:03+00:00,6723.22,INR,CARD,SUCCESS,0,0.0012,sentinel_synthetic_training,time_based_validation_sample
+TXN0002099,CUST0231,MER0041,utilities,DEV00461,2026-11-01 18:26:51+00:00,5676.41,INR,UPI,SUCCESS,0,0.0014,sentinel_synthetic_training,time_based_validation_sample
+TXN0002109,CUST0389,MER0019,grocery,DEV00778,2026-11-02 11:12:12+00:00,6242.52,INR,UPI,SUCCESS,0,0.0016,sentinel_synthetic_training,time_based_validation_sample
+TXN0002825,CUST0610,MER0071,utilities,DEV01220,2026-11-02 09:10:33+00:00,1660.06,INR,UPI,SUCCESS,0,0.0016,sentinel_synthetic_training,time_based_validation_sample
+TXN0004071,CUST0751,MER0060,utilities,DEV01501,2026-11-02 05:38:30+00:00,10374.64,INR,CARD,SUCCESS,0,0.0017,sentinel_synthetic_training,time_based_validation_sample

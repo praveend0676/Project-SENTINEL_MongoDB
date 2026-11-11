@@ -1,0 +1,3 @@
+New device and device trust
+
+When a payment originates from a device not previously associated with the customer during the prior 90 days, treat the event as a device novelty signal. Corroborate with customer history, authentication outcomes, transaction amount and device-sharing activity. A new device alone is not proof of fraud. Escalate for review when combined with other independent risk indicators.

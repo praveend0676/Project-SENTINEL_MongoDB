@@ -1,0 +1,3 @@
+New account activity
+
+An account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.

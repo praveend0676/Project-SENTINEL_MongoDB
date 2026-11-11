@@ -1,0 +1,562 @@
+[
+  {
+    "transaction_id": "TXN0001386",
+    "ground_truth_label": 1,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0001386",
+      "risk_level": "MEDIUM",
+      "risk_summary": "1 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "REVIEW",
+      "reason_codes": [
+        {
+          "code": "R08_HIGH_RISK_MCC",
+          "description": "The merchant category is in the higher-attention categories used by this demo."
+        }
+      ],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7646,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-004.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6844,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-004\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 004\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6839,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-034.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6831,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-034\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 034\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-044.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6831,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-044\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 044\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002416",
+    "ground_truth_label": 1,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002416",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002822",
+    "ground_truth_label": 1,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002822",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0003642",
+    "ground_truth_label": 1,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0003642",
+      "risk_level": "MEDIUM",
+      "risk_summary": "1 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "REVIEW",
+      "reason_codes": [
+        {
+          "code": "R05_AMOUNT_SPIKE",
+          "description": "The transaction amount is at least three times the prior customer average."
+        }
+      ],
+      "policy_citations": [
+        {
+          "document": "playbooks/SYN-PLAYBOOKS-009.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7515,
+          "supporting_excerpt": "Document ID: SYN-PLAYBOOKS-009\nDocument Type: playbooks\nTitle: Amount spike review \u2014 Scenario 009\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nCompare the transaction amount with a suitable customer baseline and merchant context. Record the baseline window and calculation method.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 009 is n"
+        },
+        {
+          "document": "playbooks/SYN-PLAYBOOKS-034.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.75,
+          "supporting_excerpt": "Document ID: SYN-PLAYBOOKS-034\nDocument Type: playbooks\nTitle: Amount spike review \u2014 Scenario 034\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nCompare the transaction amount with a suitable customer baseline and merchant context. Record the baseline window and calculation method.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 034 is n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7491,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "playbooks/SYN-PLAYBOOKS-014.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.748,
+          "supporting_excerpt": "Document ID: SYN-PLAYBOOKS-014\nDocument Type: playbooks\nTitle: Amount spike review \u2014 Scenario 014\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nCompare the transaction amount with a suitable customer baseline and merchant context. Record the baseline window and calculation method.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 014 is n"
+        },
+        {
+          "document": "playbooks/SYN-PLAYBOOKS-039.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.747,
+          "supporting_excerpt": "Document ID: SYN-PLAYBOOKS-039\nDocument Type: playbooks\nTitle: Amount spike review \u2014 Scenario 039\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nCompare the transaction amount with a suitable customer baseline and merchant context. Record the baseline window and calculation method.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario reference 039 is n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0004235",
+    "ground_truth_label": 1,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0004235",
+      "risk_level": "MEDIUM",
+      "risk_summary": "1 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "REVIEW",
+      "reason_codes": [
+        {
+          "code": "R08_HIGH_RISK_MCC",
+          "description": "The merchant category is in the higher-attention categories used by this demo."
+        }
+      ],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7646,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-004.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6844,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-004\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 004\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6839,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-034.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6831,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-034\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 034\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        },
+        {
+          "document": "investigator_notes/SYN-INVESTIGATOR_NOTES-044.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6831,
+          "supporting_excerpt": "Document ID: SYN-INVESTIGATOR_NOTES-044\nDocument Type: investigator_notes\nTitle: Merchant review \u2014 Scenario 044\nClassification: SYNTHETIC TEST DATA\nStatus: Training example only\n\nSummary\nThe merchant context and transaction sequence were reviewed. The analyst recorded the rationale and any limitations in the available data.\n\nOperational details\nThis is a fictional example created to test the SENTINEL document ingestion, text cleaning, chunking, embedding, and Qdrant search workflow. Scenario ref"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002008",
+    "ground_truth_label": 0,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002008",
+      "risk_level": "MEDIUM",
+      "risk_summary": "1 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "REVIEW",
+      "reason_codes": [
+        {
+          "code": "R03_ODD_HOUR",
+          "description": "The transaction occurred between midnight and 5 AM."
+        }
+      ],
+      "policy_citations": [
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.8148,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7027,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6855,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6829,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.6757,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002099",
+    "ground_truth_label": 0,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002099",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002109",
+    "ground_truth_label": 0,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002109",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0002825",
+    "ground_truth_label": 0,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0002825",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "TXN0004071",
+    "ground_truth_label": 0,
+    "http_status": 200,
+    "response": {
+      "transaction_id": "TXN0004071",
+      "risk_level": "LOW",
+      "risk_summary": "0 configured risk signal(s) were observed for this transaction. Review the cited evidence; these signals are not proof of fraud.",
+      "recommended_action": "ALLOW_WITH_MONITORING",
+      "reason_codes": [],
+      "policy_citations": [
+        {
+          "document": "POLICY_08_HIGH_RISK_MCC.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7273,
+          "supporting_excerpt": "Merchant category risk\n\nGaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.\n"
+        },
+        {
+          "document": "POLICY_03_ODD_HOUR.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7235,
+          "supporting_excerpt": "Unusual transaction time\n\nTransactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.\n"
+        },
+        {
+          "document": "POLICY_06_NEW_ACCOUNT.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7233,
+          "supporting_excerpt": "New account activity\n\nAn account younger than 30 days may have limited behavioural history and can carry elevated risk. Check account age as of the transaction time, prior activity, authentication and device signals. Missing account-age data must be reported as unavailable rather than assumed to be a new account.\n"
+        },
+        {
+          "document": "POLICY_05_AMOUNT_SPIKE.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7194,
+          "supporting_excerpt": "Unusual transaction amount\n\nCalculate the amount-to-average ratio using the customer's prior average transaction value. A ratio at or above 3 is a review signal in this educational example. Confirm that the baseline uses only transactions before the event and that the average is available. High value alone does not establish fraud.\n"
+        },
+        {
+          "document": "POLICY_07_VELOCITY.txt",
+          "chunk_number": 0,
+          "relevance_score": 0.7043,
+          "supporting_excerpt": "Transaction velocity\n\nA burst of four or more transactions within the preceding hour is a velocity signal in this educational example. Review the count and aggregate amount in the prior 24 hours. Use only events timestamped before the transaction being investigated. Velocity should be combined with other evidence before recommending an adverse action.\n"
+        }
+      ],
+      "evidence": {
+        "transaction_source": "CSV",
+        "graph_source": "Neo4j",
+        "policy_source": "Qdrant",
+        "graph_context": {
+          "mode": "neo4j",
+          "shared_device_customers": 1,
+          "related_transaction_count": null
+        }
+      }
+    }
+  }
+]

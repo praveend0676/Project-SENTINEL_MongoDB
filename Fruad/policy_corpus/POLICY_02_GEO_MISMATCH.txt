@@ -1,0 +1,3 @@
+Geographic mismatch
+
+Compare the customer's observed location with the merchant location and the customer's established location history. Large distance or a new city can indicate account misuse, but location may be missing or inaccurate. Do not infer a geographic mismatch when either coordinate is unavailable. Corroborate with timestamps and device context.

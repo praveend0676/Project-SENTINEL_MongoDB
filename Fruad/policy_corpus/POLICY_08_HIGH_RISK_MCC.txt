@@ -1,0 +1,3 @@
+Merchant category risk
+
+Gaming, gift cards and electronics are treated as higher-attention merchant categories in this educational dataset. Category is a contextual signal, not a standalone fraud decision. Validate the merchant category mapping and combine it with customer, device, time and velocity evidence.

@@ -1,0 +1,3 @@
+Unusual transaction time
+
+Transactions between midnight and 5 AM are considered night-time events for this learning exercise. Time alone is not sufficient to classify a transaction as fraudulent. Compare the event with the customer's normal activity and look for supporting signals such as a new device, amount spike or rapid transaction sequence.
